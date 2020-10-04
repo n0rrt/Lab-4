@@ -1,16 +1,20 @@
+using namespace std;
+#include <iostream>
 #ifndef DivSales_H
 #define DivSales_H
+
 class DivSales
-{
+{ 
 private:
 	static double corpSales;
-	double divSales;
-public:
+	double divSales = 0; //divSales must be initialized to zero in order to work correctly, otherwise returns -9.22e+61
 
+public:
 	double qtrs[4];
 	void setDivSales(double s)
 	{
 		divSales = divSales + s;
+		
 	}
 	void setCorpSales(double s)
 	{

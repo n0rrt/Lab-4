@@ -11,14 +11,7 @@ int main() {
 	int iter = 0;
 	int division = 0;
 	int quarter = 0;
-	for (DivSales div : divisions)
-	{
-		div.setDivSales(0);
-		div.setCorpSales(0);
-		//debug 
-		cout << div.getCorpSales() << endl;
-		cout << div.getDivSales() << endl;
-	}// init each division to 0
+
 	ifstream File("SalesFile.txt");
 	while (getline(File, data)) {
 		divisions[division].qtrs[quarter] = stod(data); //set quarter
@@ -36,7 +29,7 @@ int main() {
 		cout << "Enter a division (1-6) or 0 to quit: ";
 		cin >> input;
 		if (input == 0) {
-			cout << "\tTotal corporate sales: $" << &DivSales::getCorpSales;
+			cout << "\tTotal corporate sales: $" << divisions[0].getCorpSales();
 			return 0;
 		}
 		else {
